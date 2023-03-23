@@ -60,8 +60,8 @@ window.addEventListener("contextmenu", superEventHandler.handleRightClick);
     },
 
     someData: "Object는 key에 대한 value로 함수를 가질 수 있어요!"
-}
- * 
+  }
+
  * const superEventHandler = {
     onMouse: function () {
         document.querySelector("h2").style.color = colors[0];
@@ -72,8 +72,5 @@ window.addEventListener("contextmenu", superEventHandler.handleRightClick);
         document.querySelector("h2").style.color = colors[1];
         title.innerText = "The mouse is gone!";
     },
-}
- * 
- * 
- * 
+  }
  */
