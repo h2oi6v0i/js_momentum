@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="hello">
-        <h1>Grab Me!</h1>
-    </div>
-    <div class="hello">
-        <h1>Grab Me!</h1>
-    </div>
-    <div class="hello">
-        <h1>Grab Me!</h1>
-    </div>
 
+    <form class="hidden" id="login-form">
+        <input
+            required 
+            maxlength="15"
+            type="text"
+            placeholder="What is your name?"
+            />
+        <input type="submit" value="로그인">
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+  
     <script src="./app.js"></script>
 </body>
 </html>

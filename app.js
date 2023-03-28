@@ -1,27 +1,33 @@
-/**
- * NOTE: 글씨 색상 tomato, blue 번갈아가면서 나오게
- */
-const h1 = document.querySelector('div.hello:first-child h1');
-// 
-// function handleTitleClick() {
-//     const currentColor = h1.style.color; // getter
-//     let newColor;                        // setter
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector( "#greeting");
 
-//     if (currentColor === "blue") {
-//         newColor = "tomato";
-//     } else {
-//         newColor = "blue";
-//     }
-//     h1.style.color = newColor;
-// }
+const HIDDEN_CLASSNAME = "hidden";
 
-
-function handleTitleClick() {
-
-    const clickedClass = "active";
-
-    h1.classList.toggle(clickedClass);
- 
+function onLoginSubmit( event ) {
+    event.preventDefault();
+    loginForm.classList.add( HIDDEN_CLASSNAME );
+    const userName = loginInput.value;
+    localStorage.setItem( "userName", userName );
+    painGreetings( userName );
 }
 
-h1.addEventListener("click", handleTitleClick);
+function painGreetings( userName ) {
+    greeting.innerText = `Hello, ${ userName }!`;
+    greeting.classList.remove( HIDDEN_CLASSNAME );
+}
+
+/**
+ * localStorage가 비어있으면 form 보여주기
+ * localStorage에 userNaem 있으면 h1 보여주기
+ */
+
+const savedUserName = localStorage.getItem( "userName" );
+
+if ( savedUserName === null ) {
+    loginForm.classList.remove( HIDDEN_CLASSNAME );
+    loginForm.addEventListener( "submit", onLoginSubmit );
+
+} else {
+    painGreetings( savedUserName );
+}
