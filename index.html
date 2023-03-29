@@ -1,55 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum</title>
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        form {
-            display: flex;
-            align-items: center;
-        }
-
-        input {
-            margin-left: 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
 
-    <!-- <form class="hidden" id="login-form">
-        <input
-            required 
-            maxlength="15"
-            type="text"
-            placeholder="What is your name?"
-            />
+<body>
+    <form class="hidden" id="login-form">
+        <input required maxlength="15" type="text" placeholder="What is your name?" />
         <input type="submit" value="로그인">
     </form>
-    <h1 id="greeting" class="hidden"></h1> -->
-
-
-    <h1>Random Number Game</h1>
-
-    <form>
-        <h3>Generate a number between 0 and</h3>
-        <input id="max-number-input" type="number" min="0"/>
-    </form>
-
-    <form id="guess-form">
-        <p>Guess the number</p>
-        <input id="guess-number-input" type="number" />
-        <input type="submit" value="Play!">
-    </form>
-
-
-    <div id="message-area" class="hidden">
-        <p class="message"></p>
-    </div>
-  
-    <!-- <script src="./app.js"></script> -->
-    <script src="./studybook/challenge/day7.js"></script>
+    <h1 id="greeting" class="hidden"></h1>
+    <h2 id="clock"></h2>
+    <script src="./js/greetings.js"></script>
+    <script src="./js/clock.js"></script>
 </body>
+
 </html>
