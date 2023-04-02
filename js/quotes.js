@@ -1,43 +1,43 @@
 const quotes = [
     {
-        quote: "1번 문장",
-        author: "1번 작가"
+        quote: "Nothing is a waste of time if you use the experience wisely.",
+        author: "Auguste Rodin"
     },
     {
-        quote: "2번 문장",
-        author: "2번 작가"
+        quote: "The future depends on what we do in the present.",
+        author: "Mahatma Gandhi"
     },
     {
-        quote: "3번 문장",
-        author: "3번 작가"
+        quote: "A long life may not be good enough, but a good life is long enough.",
+        author: "Benjamin Franklin"
     },
     {
-        quote: "4번 문장",
-        author: "4번 작가"
+        quote: "Life is a tragedy when seen in close-up, but a comedy in long-shot.",
+        author: "Charlie Chaplin"
     },
     {
-        quote: "5번 문장",
-        author: "5번 작가"
+        quote: "Life is pleasant. Death is peaceful. It's the transition that's troublesome.",
+        author: "Isaac Asimov"
     },
     {
-        quote: "6번 문장",
-        author: "6번 작가"
+        quote: "Judge thyself with the judgment of sincerity, and thou will judge others with the judgment of charity.",
+        author: "John Mitchell Mason"
     },
     {
-        quote: "7번 문장",
-        author: "7번 작가"
+        quote: "If I only had an hour to chop down a tree, I would spend the first 45 minutes sharpening my axe.",
+        author: "Abraham Lincoln"
     },
     {
-        quote: "8번 문장",
-        author: "8번 작가"
+        quote: "Many of life's failures are people who did not realize how close they were to success when they gave up.",
+        author: "Thomas A. Edison"
     },
     {
-        quote: "9번 문장",
-        author: "9번 작가"
+        quote: "The superior man acts before he speaks, and afterwards speaks according to his action.",
+        author: "Confucius"
     },
     {
-        quote: "10번 문장",
-        author: "10번 작가"
+        quote: "Failure is not the only punishment for laziness; there is also the success of others.",
+        author: "Jules Renard"
     },
 ]
 
