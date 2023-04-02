@@ -18,6 +18,17 @@ let toDos = []; // 1
  * [✔️] 2.localStorage에 toDo들이 있으면 toDos에 parsedToDos를 넣어서 전에 있던 toDo들 복원시키기
  */
 
+
+/**
+ * 🚨
+ * localStorage에서 삭제하기
+ * 
+ * 🔍
+ * [✔️] 1.삭제 버튼 클릭한 id를 제외한 새로운 배열 만들기
+ * [✔️] 2.li.id는 string, toDo.id는 number -> li.id를 number로 바꾸기!
+ * [✔️] 3.toDos 배열 업데이트 (toDos 배열이 localStorage에 저장되어 있기 때문에)
+ */
+
 function saveToDos() {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
@@ -25,12 +36,15 @@ function saveToDos() {
 function deleteToDo(event) {
     const li = event.target.parentElement;
     li.remove();
+    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id)); // 1, 2
+    saveToDos(); // 3
 }
 
 function paintToDo(newTodo) {
     const li = document.createElement("li");
+    li.id = newTodo.id;
     const span = document.createElement("span");
-    span.innerText = newTodo;
+    span.innerText = newTodo.text;
     const button = document.createElement("button");
     button.innerText = "❌";
     button.addEventListener("click", deleteToDo)
@@ -44,8 +58,12 @@ function handleToDoSubmit(event) {
     event.preventDefault();
     const newTodo = toDoInput.value;
     toDoInput.value = "";
-    toDos.push(newTodo);
-    paintToDo(newTodo);
+    const newTodoObj = {
+        text: newTodo,
+        id: Date.now(),
+    };
+    toDos.push(newTodoObj);
+    paintToDo(newTodoObj);
     saveToDos();
 }
 
